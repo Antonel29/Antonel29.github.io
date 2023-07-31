@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Portofolio</title>
+    <style>
+        ::-webkit-scrollbar{
+            width: 10px;
+            height: 10px;
+            background-color: #f0f8ff;
+        }
+
+        ::-webkit-scrollbar-thumb{
+            background: #191919;
+        }
+
+        *, html, body{
+            margin: 0;
+            padding: 0;
+            color: #191919;
+            font-family: 'DM Sans';
+        }
+
+        body{
+            overflow-x: hidden;
+            background-color: #191919;
+        }
+
+        .page{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+        }
+
+        .content{
+            margin: 75px;
+            overflow: hidden;
+            background-color: #f0f8ff;
+        }
+
+        .preLoad{animation: pullUp 3s ease 6s forwards;}
+
+        @keyframes pullUp{
+            100%{
+                height: 0px;
+            }
+        }
+
+        .preLoad > .content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: turnOff 1s ease 5s forwards;
+        }
+
+        @keyframes turnOff{
+            100%{
+                background-color: #191919;
+            }
+        }
+
+        .box{
+            width: 15px;
+            margin: 5px;
+            height: 15px;
+            border: 4px solid #191919;
+            background-color: #191919;
+            animation: fadeBlock 2s linear 2 forwards;
+        }
+
+        .box:nth-child(1){animation-delay: 0.2s;}
+        .box:nth-child(2){animation-delay: 0.4s;}
+        .box:nth-child(3){animation-delay: 0.6s;}
+        .box:nth-child(4){animation-delay: 0.8s;}
+        .box:nth-child(5){animation-delay: 1s;}
+
+        @keyframes fadeBlock{
+            20%{
+                background-color: #f0f8ff;
+            }
+
+            40%{
+                background-color: #B5BBC0;
+            }
+
+            60%{
+                background-color: #7E8285;
+            }
+
+            80%{
+                background-color: #414344;
+            }
+
+            100%{
+                background-color: #191919;
+            }
+        }
+
+        .page1 > .content {
+            display: flex;
+            flex-direction: column;
+            background-color: #191919;
+        }
+
+        .name {
+            order: -1;
+            width: 100%;
+            display: flex;
+            font-weight: bold;
+            margin-bottom: 50px;
+            justify-content: space-between;
+        }
+
+        .name > p{
+            opacity: 0;
+            bottom: -15px;
+            font-size: 200px;
+            color: #f0f8ff;
+            position: relative;
+            font-family: 'DM Sans';
+            animation: name 1s ease forwards;
+            font-weight: 800;
+        }
+
+        .name > p:nth-child(1){animation-delay: 7.3s;}
+        .name > p:nth-child(2){animation-delay: 7.5s;}
+        .name > p:nth-child(3){animation-delay: 7.7s;}
+        .name > p:nth-child(4){animation-delay: 8s;}
+        .name > p:nth-child(5){animation-delay: 8.3s;}
+        .name > p:nth-child(6){animation-delay: 8.6s;}
+        .name > p:nth-child(7){animation-delay: 8.9s;}
+
+        @keyframes name{
+            0%{
+                opacity: 0; 
+                bottom: -15px;
+            }
+
+            70%{
+                opacity: 1; 
+            }
+
+            85%{
+                opacity: 1;
+            }
+
+            100%{
+                opacity: 1; 
+                bottom: 0;
+            }
+        }
+
+        .role {
+            order: -1;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .role > p{
+            position: relative;
+            letter-spacing: 2px;
+            bottom: 15px;
+            opacity: 0;
+            color: #f0f8ff;
+            font-family: 'Share Tech Mono', monospace;
+            animation: role 1s ease-out forwards;
+        }
+
+        .role > p:nth-child(1){animation-delay: 10s;}
+        .role > p:nth-child(2){animation-delay: 10.2s;}
+        .role > p:nth-child(3){animation-delay: 10.4s;}
+
+        @keyframes role{
+            0%{
+                opacity: 0; 
+                bottom: 15px;
+            }
+
+            70%{
+                opacity: 1; 
+            }
+
+            85%{
+                opacity: 1;
+            }
+
+            100%{
+                opacity: 1; 
+                bottom: 0;
+            }
+        }
+
+		.nick{
+            margin-top: auto;
+			height: 28px;
+			overflow: hidden;
+            font-size: 22px;
+            letter-spacing: 4px;
+            margin-left: auto;
+		}
+
+		.nick span{
+			height: 100%;
+			display: grid;
+            color: #f0f8ff;
+            animation: shuffle 4s linear infinite alternate;
+            font-family: 'Share Tech Mono', monospace;
+		}
+
+		@keyframes shuffle{
+			100%{
+				transform: translateY(-145px);
+			}
+		}
+
+        .profile{
+            height: 250vh;
+        }
+
+        .profile > .content{
+            padding: 50px;
+            overflow-y: scroll;
+        }
+
+        .myName{
+            font-size: 26px;
+            letter-spacing: 2px;
+            margin-bottom: 50px;
+        }
+
+        .bio{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bio > img{
+            width: 250px;
+        }
+
+        .about{
+            margin-left: 50px;
+            height: 250px;
+        }
+
+        .sub-title{
+            font-size: 26px;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+
+        .sub-topic{
+            word-spacing: 2px;
+            font-size: 20px;
+        }
+
+        .about > p:nth-child(2){
+            margin-bottom: 50px;
+        }
+
+        .addition{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            border-bottom: 5px solid #191919;
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+        }
+
+        .about > p:nth-child(7){
+            border-bottom: 5px solid black;
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+        }
+
+        .about > p:nth-child(9), .about > p:nth-child(10){
+            font-weight: bold;
+        }
+
+        .about > p:nth-child(12){
+            margin-bottom: 50px;
+        }
+
+        .about > p:nth-child(13){
+            border-bottom: 5px solid black;
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+        }
+
+        .about > p:nth-child(19){
+            padding-bottom: 50px;
+            border-bottom: 5px solid black;
+            margin-bottom: 50px;
+        }
+
+        .pro:nth-child(odd){
+            font-weight: bold;
+        }
+
+        .pro:nth-child(even){
+            margin-bottom: 50px;
+        }
+
+        path{
+            stroke-dasharray: 1295.6241455078125px;
+            stroke-dashoffset: 1295.6241455078125px;
+            animation: signature 6s linear 1s forwards infinite;
+        }
+
+        @keyframes signature{
+            to{
+                stroke-dashoffset: 0px;
+            }
+        }
+
+        .contact > .content{
+            background-color: #191919;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cont{
+            order: -1;
+            width: 600px;
+            display: flex;
+            font-weight: bold;
+            justify-content: space-between;
+        }
+
+        .cont > p{
+            font-size: 50px;
+            color: #f0f8ff;
+            position: relative;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .email{
+            position: relative;
+            margin-top: auto;
+            order: 2;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .email > a{
+            text-align: center;
+            color: #f0f8ff;
+            text-decoration: none;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 26px;
+            letter-spacing: 5px;
+            padding: 5px;
+            padding-left: 20px;
+            padding-right: 15px;
+        }
+
+        .email > a::after{
+            content: "";
+            background: #f0f8ff;
+            mix-blend-mode: exclusion;
+            width: 100%;
+            height: 0;
+            position: absolute;
+            bottom: -5px;
+            left: 0px;
+            transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        }
+
+        .email > a:hover::after{
+            height: calc(100% + 10px);
+        }
+
+        .sosmed{
+            display: flex;
+            margin-top: auto;
+            order: 3;
+            margin-left: auto;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        .acc{
+            display: grid;
+            margin-left: 50px;
+            transition: 0.6s;
+            text-decoration: none;
+        }
+
+        .acc > span{
+            height: 40px;
+            color: #f0f8ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 18px;
+            transition: 1s;
+            letter-spacing: 2px;
+        }
+
+        .sosmed > .acc:nth-child(1):hover{
+            transform: translateY(-160px);
+        }
+
+        .sosmed > .acc:nth-child(2):hover{
+            transform: translateY(-160px);
+        }
+
+        .sosmed > .acc:nth-child(3):hover{
+            transform: translateY(-160px);
+        }
+        
+        .sosmed > .acc:nth-child(4):hover{
+            transform: translateY(-160px);
+        }
+
+        .sosmed > .acc:nth-child(5):hover{
+            transform: translateY(-160px);
+        }
+
+        .sosmed:hover .acc > span:nth-child(5){
+            background-color: #0b0909;
+            transition: 0s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="preLoad page">
+        <div class="content">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+
+    <div class="page1 page">
+        <div class="content">
+            <div class="name">
+                <p>A</p>
+                <p>N</p>
+                <p>T</p>
+                <p>O</p>
+                <p>N</p>
+                <p>E</p>
+                <p>L</p>
+            </div>
+            <div class="role">
+                <p>Front-End Web</p>
+                <p>Fullstack Web</p>
+                <p>UI/UX Designer</p>
+            </div>
+            <div class="nick">
+                <span>Asamaru</span>
+                <span>AntMaru</span>
+                <span>AntMan</span>
+                <span>Anther</span>
+                <span>Basa</span>
+                <span>Megumi</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile page">
+        <div class="content">
+            <p class="myName">Antonel Manurung</p>
+            <div class="bio">
+                <img src="antonel.jpg" alt="myPicture">
+                <div class="about">
+                    <p class="sub-title">About Me</p>
+                    
+                    <p class="sub-topic">
+                        I am Antonel Manurung, I work as a Front-End Web, Fullstack Web and UI/UX Designer. I am an Indonesian citizen. I also studied at the Del Institute of Technology and majored in Diploma 3 in Computer Technology. 
+                        I also have expertise in Networking, Cloud Computing, and IoT. Front-End and UI/UX are my passion, I like doing designing, coloring and other things.
+                    </p>
+                    
+                    <div class="addition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 148 127" fill="none">
+                            <path d="M68.8876 1L1 91.255L12.6876 48.948H52.2266L93.7549 1L25.6186 91.255L44.5697 73.157L34.0734 91.255L52.2266 73.157L41.7823 91.255L100.966 26.8543L23.6478 125.076L72.6177 73.157L62.4221 91.255L79.3319 73.157L68.8876 91.255L85.7973 73.157L75.8504 91.255L92.5115 73.157L82.8133 91.255L141.5 26.8543L62.4221 125.076L52.2266 106.035H148M20 99H47.5H74M126.58 89.1397L129.564 87.0243" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </div>
+
+                    <p class="sub-title">Education</p>
+
+                    <p class="sub-topic">Del Institute Oof Technology</p>
+                    <p class="sub-topic">Associate's degree, Computer Technology</p>
+                    <p class="sub-topic">July 2020 - October 2023</p>
+
+                    <p class="sub-title">Experience</p>
+
+                    <p class="sub-topic">Network Engineer</p>
+                    <p class="sub-topic">Telkomsat - Intern</p>
+                    <p class="sub-topic">Juny 2023 - August 2023</p>
+                    <p class="sub-topic">Medan Tembung, Sumatera Utara, Indonesia</p>
+                    <p class="sub-topic">Technical Support - Networking</p>
+
+                    <p class="sub-title">Skills</p>
+
+                    <p class="sub-topic">HTML - CSS - JavaScript - Bootstrap - Tailwind - SCSS - JQuery</p>
+                    <p class="sub-topic">Laravel - NodeJS - VueJS - ReactJS - Java - C - C++</p>
+                    <p class="sub-topic">Golang - Python - MySQL - MongoDB - MariaDB - InfluxDB</p>
+                    <p class="sub-topic">Sheel Programming - Linux - Cisco - Node-Red - Solidworks</p>
+                    <p class="sub-topic">Unity - Adobe Illustrator - Figma - UI/UX - Digital Design</p>
+
+                    <p class="sub-title">Project</p>
+
+                    <p class="pro sub-topic">IT Del Canteen Website (November 2020 - December 2020)</p>
+                    <p class="pro sub-topic">Create dynamic websites using HTML, CSS, JavaScript, JQuery & ReactJS (front-end)</p>
+
+                    <p class="pro sub-topic">Learn Programming Language Website (January 2021 - June 2021)</p>
+                    <p class="pro sub-topic">Build dynamic websites using native HTML, CSS, JavaScript and PHP (full-stack)</p>
+
+                    <p class="pro sub-topic">Hand Blower 3D Model using SolidWorks (November 2021 - December 2021)</p>
+                    <p class="pro sub-topic">Make a 3D model of a hand blower using Solidworks (designer)</p>
+
+                    <p class="pro sub-topic">Embedded System Monitoring Water Quality (January 2022 - June 2022)</p>
+                    <p class="pro sub-topic">Making prototypes using water sensors, turbidity, water temperature, node-MCU microcontrollers that are monitored with the Blynk application</p>
+
+                    <p class="pro sub-topic">IoT Based Smart Home (November 2022 - December 2022)</p>
+                    <p class="pro sub-topic">Building a prototype using Raspberry PI 3, Python, Node-Red and Postman (programmer)</p>
+
+                    <p class="pro sub-topic">Website Monitoring IDS Integrations Method (March 2023 - Present)</p>
+                    <p class="pro sub-topic">Create websites in real-time using HTML, CSS, and PHP native(full-stack)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact page">
+        <div class="content">
+            <div class="cont">
+                <p>C</p>
+                <p>O</p>
+                <p>N</p>
+                <p>T</p>
+                <p>A</p>
+                <p>C</p>
+                <p>T</p>
+            </div>
+            <div class="email">
+                <a href="mailto:@antonelmanurung@gmail.com">antonelmanurung@gmail.com</a>
+            </div>
+            <div class="sosmed">
+                <a href="" class="acc linkedin">
+                    <span>LinkedIn</span>
+                    <span>L1nked1n</span>
+                    <span>L1nk3d1n</span>
+                    <span>L1nk361n</span>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="" class="acc instagram">
+                    <span>Instagram</span>
+                    <span>Instagram</span>
+                    <span>Instagram</span>
+                    <span>Instagram</span>
+                    <span>Instagram</span>
+                </a>
+                <a href="" class="acc github">
+                    <span>GitHub</span>
+                    <span>GitHub</span>
+                    <span>GitHub</span>
+                    <span>GitHub</span>
+                    <span>GitHub</span>
+                </a>
+                <a href="" class="acc codepen">
+                    <span>CodePen</span>
+                    <span>CodePen</span>
+                    <span>CodePen</span>
+                    <span>CodePen</span>
+                    <span>CodePen</span>
+                </a>
+                <a href="" class="acc spotify">
+                    <span>Spotify</span>
+                    <span>Spotify</span>
+                    <span>Spotify</span>
+                    <span>Spotify</span>
+                    <span>Spotify</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
