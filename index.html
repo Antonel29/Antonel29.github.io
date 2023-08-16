@@ -589,5 +589,15 @@
             </div>
         </div>
     </div>
+	<script>
+        window.onload = function() {
+            var preLoad = document.querySelector('.preLoad');
+            
+            window.addEventListener('beforeunload', function() {
+                preLoad.style.display = 'block';
+                window.scrollTo(0, 0);
+            });
+        };
+    </script>
 </body>
 </html>
