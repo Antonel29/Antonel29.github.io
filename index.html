@@ -29,7 +29,15 @@
 
         body{
             overflow-x: hidden;
+            overflow-y: hidden;
             background-color: #191919;
+            animation: scroll 3s ease 6s forwards;
+        }
+
+        @keyframes scroll{
+            100%{
+                overflow-y: scroll;
+            }
         }
 
         .page{
@@ -221,7 +229,7 @@
 		}
 
         .profile{
-            height: 250vh;
+            height: 350vh;
         }
 
         .profile > .content{
@@ -288,12 +296,36 @@
         }
 
         .about > p:nth-child(13){
-            border-bottom: 5px solid black;
-            padding-bottom: 50px;
             margin-bottom: 50px;
         }
 
+        .about > p:nth-child(14){
+            font-weight: bold;
+        }
+
+        .about > p:nth-child(15){
+            font-weight: bold;
+        }
+
+        .about > p:nth-child(16){
+            margin-bottom: 50px;
+        }
+
+        .about > p:nth-child(17){
+            font-weight: bold;
+        }
+
+        .about > p:nth-child(18){
+            font-weight: bold;
+        }
+
         .about > p:nth-child(19){
+            padding-bottom: 50px;
+            border-bottom: 5px solid black;
+            margin-bottom: 50px;
+        }
+
+        .about > p:nth-child(25){
             padding-bottom: 50px;
             border-bottom: 5px solid black;
             margin-bottom: 50px;
@@ -427,6 +459,10 @@
             transform: translateY(-160px);
         }
 
+        .sosmed > .acc:nth-child(6):hover{
+            transform: translateY(-160px);
+        }
+
         .sosmed:hover .acc > span:nth-child(5){
             background-color: #0b0909;
             transition: 0s;
@@ -481,7 +517,8 @@
                     <p class="sub-title">About Me</p>
                     
                     <p class="sub-topic">
-                        I am Antonel Manurung, a 6th semester student of Diploma 3 in Computer Technology at the Del Institute of Technology and I am also a fresh graduate. When I study and work on project assignments given, I can work as a front-end, back-end, up to UI/UX. Being a user interface engineer has become my passion and my hobby. While in college I also learned about networking, cloud computing, and IoT.
+                        I am Antonel Manurung, I work as a Front-End Web, Fullstack Web and UI/UX Designer. I am an Indonesian citizen. I also studied at the Del Institute of Technology and majored in Diploma 3 in Computer Technology. 
+                        I also have expertise in Networking, Cloud Computing, and IoT. Front-End and UI/UX are my passion, I like doing designing, coloring and other things.
                     </p>
                     
                     <div class="addition">
@@ -503,6 +540,14 @@
                     <p class="sub-topic">Juny 2023 - August 2023</p>
                     <p class="sub-topic">Medan Tembung, Sumatera Utara, Indonesia</p>
                     <p class="sub-topic">Technical Support - Networking</p>
+                    
+                    <p class="sub-topic">Anggota Divisi KOMINFO</p>
+                    <p class="sub-topic">Anggota pengurus HIMAPRO D3 Teknologi Komputer IT Del</p>
+                    <p class="sub-topic">September 2022 - Agustus 2023</p>
+
+                    <p class="sub-topic">UI/UX Game Developer</p>
+                    <p class="sub-topic">Unit Kegiatan Mahasiswa Del SAGA</p>
+                    <p class="sub-topic">Mei 2021 - Agustus 2023</p>
 
                     <p class="sub-title">Skills</p>
 
@@ -531,6 +576,9 @@
 
                     <p class="pro sub-topic">Website Monitoring IDS Integrations Method (March 2023 - Present)</p>
                     <p class="pro sub-topic">Create websites in real-time using HTML, CSS, and PHP native(full-stack)</p>
+
+                    <p class="pro sub-topic">VSAT Network Configuration - Internship(June 2023 - August 2023)</p>
+                    <p class="pro sub-topic">Building a VSAT network system for a Bank</p>
                 </div>
             </div>
         </div>
@@ -551,45 +599,52 @@
                 <a href="mailto:@antonelmanurung@gmail.com">antonelmanurung@gmail.com</a>
             </div>
             <div class="sosmed">
-                <a href="" class="acc linkedin">
+                <a href="https://www.linkedin.com/in/antonel-manurung/" class="acc linkedin">
                     <span>LinkedIn</span>
-                    <span>L1nked1n</span>
-                    <span>L1nk3d1n</span>
-                    <span>L1nk361n</span>
+                    <span>LinkedIn</span>
+                    <span>LinkedIn</span>
+                    <span>LinkedIn</span>
                     <span>LinkedIn</span>
                 </a>
-                <a href="" class="acc instagram">
+                <a href="https://www.instagram.com/asamaru_ant/" class="acc instagram">
                     <span>Instagram</span>
                     <span>Instagram</span>
                     <span>Instagram</span>
                     <span>Instagram</span>
                     <span>Instagram</span>
                 </a>
-                <a href="" class="acc github">
+                <a href="https://github.com/Antonel29" class="acc github">
                     <span>GitHub</span>
                     <span>GitHub</span>
                     <span>GitHub</span>
                     <span>GitHub</span>
                     <span>GitHub</span>
                 </a>
-                <a href="" class="acc codepen">
+                <a href="https://codepen.io/Antonel29" class="acc codepen">
                     <span>CodePen</span>
                     <span>CodePen</span>
                     <span>CodePen</span>
                     <span>CodePen</span>
                     <span>CodePen</span>
                 </a>
-                <a href="" class="acc spotify">
-                    <span>Spotify</span>
-                    <span>Spotify</span>
-                    <span>Spotify</span>
-                    <span>Spotify</span>
-                    <span>Spotify</span>
+                <a href="https://www.youtube.com/channel/UCO5ss73fJZEiuySFhs3sjLw" class="acc youtube">
+                    <span>Youtube</span>
+                    <span>Youtube</span>
+                    <span>Youtube</span>
+                    <span>Youtube</span>
+                    <span>Youtube</span>
+                </a>
+                <a href="" class="acc myresume">
+                    <span>MyResume</span>
+                    <span>MyResume</span>
+                    <span>MyResume</span>
+                    <span>MyResume</span>
+                    <span>MyResume</span>
                 </a>
             </div>
         </div>
     </div>
-	<script>
+    <script>
         window.onload = function() {
             var preLoad = document.querySelector('.preLoad');
             
